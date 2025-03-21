@@ -125,7 +125,7 @@ The target variable is **MedPrice**, which represents the median house price for
 ## Contact
 
 - **Name**: Musabbir Km
-- **Email**: musabbir.khan@example.com
+- **Email**: musabbirmushu@gmail.com
 - **GitHub**: [musabbirkm](https://github.com/musabbirkm)
 - **LinkedIn**: [Musabbir Km](https://www.linkedin.com/in/musabbir-km)
 ## Installation
@@ -140,3 +140,4 @@ The target variable is **MedPrice**, which represents the median house price for
    ```bash
    git clone https://github.com/musabbirkm/CaliforniaHousingRegressionAnalysis.git
    cd CaliforniaHousingRegressionAnalysis
+   pip install -r requirements.txt

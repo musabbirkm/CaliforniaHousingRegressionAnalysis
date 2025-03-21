@@ -52,6 +52,82 @@ The target variable is **MedPrice**, which represents the median house price for
 
 ---
 
+## Methodology
+
+### Preprocessing
+
+#### Feature Scaling:
+- Features are standardized using **StandardScaler** to ensure all features have a mean of 0 and a standard deviation of 1.
+- This is necessary for algorithms like **Linear Regression** and **SVR**, which are sensitive to the scale of input features.
+
+#### Train-Test Split:
+- The dataset is split into **training (80%)** and **testing (20%)** sets to evaluate model performance on unseen data.
+
+### Regression Algorithms
+
+1. **Linear Regression**:
+   - Models a linear relationship between features and the target.
+   - Suitable as a baseline model.
+
+2. **Decision Tree Regressor**:
+   - Splits data into subsets based on feature thresholds.
+   - Captures non-linear relationships but is prone to overfitting.
+
+3. **Random Forest Regressor**:
+   - Ensemble of decision trees to reduce overfitting.
+   - Handles non-linear relationships and feature interactions effectively.
+
+4. **Gradient Boosting Regressor**:
+   - Sequentially builds trees to correct errors from previous trees.
+   - Achieves high accuracy by focusing on hard-to-predict instances.
+
+5. **Support Vector Regressor (SVR)**:
+   - Uses a kernel trick to model non-linear relationships.
+   - Suitable for small to medium-sized datasets but requires careful tuning.
+
+### Evaluation Metrics
+
+- **Mean Squared Error (MSE)**: Measures the average squared difference between predicted and actual values. Lower values indicate better performance.
+- **Mean Absolute Error (MAE)**: Measures the average absolute difference between predicted and actual values. Less sensitive to outliers compared to MSE.
+- **R-squared (R²)**: Represents the proportion of variance in the target variable explained by the model. Higher values indicate better performance.
+
+## Results
+
+### Model Comparison
+
+| Model                    | MSE    | MAE    | R²     |
+|--------------------------|--------|--------|--------|
+| Gradient Boosting         | 0.2950 | 0.3339 | 0.7887 |
+| Random Forest             | 0.3254 | 0.3507 | 0.7666 |
+| Decision Tree             | 0.4836 | 0.4656 | 0.6532 |
+| Linear Regression         | 0.5552 | 0.5332 | 0.6016 |
+| Support Vector Regressor  | 0.6285 | 0.5469 | 0.5503 |
+
+### Best Model
+- **Gradient Boosting Regressor** achieved the lowest **MSE (0.2950)** and highest **R² (0.7887)**.
+
+### Worst Model
+- **Support Vector Regressor** had the highest **MSE (0.6285)** and lowest **R² (0.5503)**.
+
+## Conclusion
+- **Gradient Boosting Regressor** performed the best due to its ability to model complex relationships and correct errors iteratively.
+- **Support Vector Regressor** performed the worst, likely due to the dataset's size and the need for hyperparameter tuning.
+- Tree-based models (**Random Forest** and **Gradient Boosting**) outperformed linear models, indicating that non-linear relationships are present in the data.
+
+
+
+## Acknowledgments
+
+- **Dataset**: California Housing Dataset from sklearn.
+- **Libraries**: numpy, pandas, scikit-learn, matplotlib, and jupyter.
+- **Inspiration**: This project was inspired by the need to evaluate and compare regression techniques for real-world datasets.
+
+## Contact
+
+- **Name**: Musabbir Km
+- **Email**: musabbir.khan@example.com
+- **GitHub**: [musabbirkm](https://github.com/musabbirkm)
+- **LinkedIn**: [Musabbir Km](https://www.linkedin.com/in/musabbir-km)
 ## Installation
 
 ### Prerequisites
